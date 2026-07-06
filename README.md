@@ -1,10 +1,6 @@
-# kotlovsky portfolio v12
+# kotlovsky portfolio v13
 
-Dark glass / editorial uppercase version.
-
-Upload the contents of this folder to the GitHub repository root:
+Text, video links, contact link and social footer update.
+Upload all files to the repository root, or at minimum replace:
 - index.html
 - style.css
-- script.js
-- .nojekyll
-- assets/

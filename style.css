@@ -15,10 +15,10 @@ body {
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  font-family: "Arial Narrow", "Helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.75;
-  letter-spacing: .09em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.65;
+  letter-spacing: .065em;
   text-transform: uppercase;
   background:
     radial-gradient(circle at 12% 12%, rgba(139,95,130,.18), transparent 26%),
@@ -85,8 +85,8 @@ nav a:hover { color: #fff; }
 .first-section { padding-top: 108px; }
 
 .section-head {
-  width: min(1480px, calc(100vw - 72px));
-  margin: 0 auto 52px;
+  width: min(1600px, calc(100vw - 48px));
+  margin: 0 auto 42px;
 }
 
 .section-head h1,
@@ -102,13 +102,13 @@ nav a:hover { color: #fff; }
 
 .section-head p {
   width: 100%;
-  max-width: 1180px;
-  margin: 0 0 15px;
+  max-width: 1280px;
+  margin: 0 0 14px;
   color: rgba(255,255,255,.88);
-  font-size: 12px;
-  line-height: 1.9;
+  font-size: 11px;
+  line-height: 1.72;
   font-weight: 600;
-  letter-spacing: .085em;
+  letter-spacing: .072em;
   text-transform: uppercase;
 }
 .section-head p:last-of-type { margin-bottom: 0; }
@@ -214,6 +214,8 @@ nav a:hover { color: #fff; }
   border: 1px solid rgba(255,255,255,.10);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
+  overflow: hidden;
+  text-decoration: none;
 }
 .video-slot span {
   font-size: 12px;
@@ -289,14 +291,73 @@ nav a:hover { color: #fff; }
   margin: 0;
   min-height: 100vh;
   color: var(--ink);
-  font-family: "Arial Narrow", "Helvetica Neue Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 1.75;
-  letter-spacing: .09em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.65;
+  letter-spacing: .065em;
   text-transform: uppercase;
   background:
     radial-gradient(circle at 12% 12%, rgba(139,95,130,.18), transparent 26%),
     radial-gradient(circle at 86% 18%, rgba(255,255,255,.045), transparent 18%),
     linear-gradient(180deg, rgba(0,0,0,.52), rgba(0,0,0,.78)),
     url("assets/background/black-brick.jpg") center top / cover fixed no-repeat;
+}
+
+
+.video-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) brightness(.62) contrast(1.08);
+  opacity: .78;
+  transition: filter .38s ease, opacity .38s ease, transform .38s ease;
+}
+
+.video-link:hover img {
+  filter: grayscale(0) brightness(.92) contrast(1);
+  opacity: 1;
+  transform: scale(1.025);
+}
+
+.text-link {
+  color: var(--aubergine);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(139,95,130,.55);
+  padding-bottom: 2px;
+}
+
+.text-link:hover {
+  color: #b584aa;
+  border-bottom-color: #b584aa;
+}
+
+.site-footer {
+  width: min(1600px, calc(100vw - 48px));
+  margin: 40px auto 70px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 22px;
+}
+
+.site-footer a {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--aubergine);
+  opacity: .86;
+  transition: opacity .25s ease, transform .25s ease, color .25s ease;
+}
+
+.site-footer a:hover {
+  color: #b584aa;
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.site-footer svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
