@@ -1,0 +1,160 @@
+
+/* KOTLOVSKY PORTFOLIO — v20 DOM-safe hotfix
+   Use after all existing CSS.
+*/
+
+/* Brick: slightly darker than v19, still aubergine-lit */
+html body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 14% 16%, rgba(154, 91, 148, 0.145), transparent 23%),
+    radial-gradient(circle at 86% 14%, rgba(154, 91, 148, 0.145), transparent 24%),
+    radial-gradient(circle at 50% 0%, rgba(102, 70, 110, 0.075), transparent 40%),
+    linear-gradient(180deg, rgba(255,255,255,0.026), rgba(0,0,0,0.08) 42%, rgba(0,0,0,0.22));
+  mix-blend-mode: screen;
+}
+
+/* Contact center */
+#contact,
+.contact,
+.contact-section,
+footer,
+.footer {
+  text-align: center !important;
+}
+
+.kotlovsky-socials-v20 {
+  width: 100%;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 22px !important;
+  margin: 20px auto 0 auto !important;
+  padding: 0 !important;
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  z-index: 5;
+}
+
+.kotlovsky-socials-v20 a {
+  width: 46px !important;
+  height: 46px !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 999px !important;
+  color: #8a5c86 !important;
+  background: rgba(12, 10, 14, 0.24) !important;
+  border: 1px solid rgba(138, 92, 134, 0.44) !important;
+  text-decoration: none !important;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.03) inset !important;
+  overflow: hidden !important;
+}
+
+.kotlovsky-socials-v20 a:hover {
+  color: #d7b1d2 !important;
+  border-color: rgba(185, 138, 179, 0.78) !important;
+  background: rgba(138, 92, 134, 0.16) !important;
+  transform: translateY(-1px);
+}
+
+.kotlovsky-socials-v20 svg {
+  width: 20px !important;
+  height: 20px !important;
+  display: block !important;
+  fill: currentColor !important;
+}
+
+/* Hide broken old side social links only after v20 socials exist */
+body.kotlovsky-v20-socials-ready a[href*="linkedin.com"]:not(.kotlovsky-social-link-v20),
+body.kotlovsky-v20-socials-ready a[href*="youtube.com/channel"]:not(.kotlovsky-social-link-v20),
+body.kotlovsky-v20-socials-ready a[href*="instagram.com/gizmokotlovsky"]:not(.kotlovsky-social-link-v20) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  left: -9999px !important;
+}
+
+/* Write me never blue */
+a[href^="mailto:"],
+a[href^="mailto:"]:visited,
+a[href^="mailto:"]:hover,
+a[href^="mailto:"]:active {
+  color: #8a5c86 !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(138, 92, 134, 0.5);
+}
+
+a[href^="mailto:"]:hover {
+  color: #d7b1d2 !important;
+}
+
+/* Video hover/play: classes added by JS */
+.kotlovsky-video-card-v20 {
+  position: relative !important;
+  overflow: hidden !important;
+  display: block !important;
+}
+
+.kotlovsky-video-card-v20 img,
+.kotlovsky-video-card-v20 .kotlovsky-video-bg-v20 {
+  filter: grayscale(1) saturate(0.78) brightness(0.84) !important;
+  transition: filter 0.25s ease, transform 0.25s ease !important;
+}
+
+.kotlovsky-video-card-v20:hover img,
+.kotlovsky-video-card-v20:hover .kotlovsky-video-bg-v20 {
+  filter: grayscale(0) saturate(1.02) brightness(1) !important;
+  transform: scale(1.012);
+}
+
+.kotlovsky-video-card-v20::after {
+  content: "▶" !important;
+  position: absolute !important;
+  inset: 50% auto auto 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 999px !important;
+  display: grid !important;
+  place-items: center !important;
+  padding-left: 3px !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  color: rgba(255,255,255,0.94) !important;
+  background: rgba(8, 8, 10, 0.47) !important;
+  border: 1px solid rgba(255,255,255,0.17) !important;
+  box-shadow: 0 0 18px rgba(0,0,0,0.25) !important;
+  pointer-events: none !important;
+  z-index: 6 !important;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease !important;
+}
+
+.kotlovsky-video-card-v20:hover::after {
+  background: rgba(138, 92, 134, 0.42) !important;
+  border-color: rgba(215, 177, 210, 0.62) !important;
+  transform: translate(-50%, -50%) scale(1.05) !important;
+}
+
+/* Thumbnail fit stays from previous fix */
+.kotlovsky-video-card-v20 img {
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: rgba(0,0,0,0.34) !important;
+  display: block !important;
+}
