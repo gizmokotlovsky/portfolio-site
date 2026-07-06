@@ -1,6 +1,6 @@
-# kotlovsky portfolio v9
+# kotlovsky portfolio v12
 
-Dark luxury / gallery version.
+Dark glass / editorial uppercase version.
 
 Upload the contents of this folder to the GitHub repository root:
 - index.html
