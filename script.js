@@ -23,7 +23,8 @@ function showCurrent() {
   if (!list.length) return;
   if (currentIndex < 0) currentIndex = list.length - 1;
   if (currentIndex >= list.length) currentIndex = 0;
-  lbImage.src = list[currentIndex].src;
+  const src = list[currentIndex].src;
+  lbImage.src = src;
 }
 
 function openLightbox(galleryName, index) {
