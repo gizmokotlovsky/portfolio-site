@@ -1,11 +1,12 @@
-# kotlovsky portfolio v15
+# kotlovsky portfolio v16
 
-Upload at least:
+Upload:
+- index.html
 - style.css
 
-index.html is included too, but main changes are CSS:
-- lighter glass panel
-- section text inset relative to slider
-- no luxury line
-- five video thumbnails fit
-- violet links/footer
+Fixes:
+- CSS-only social icons, no broken red boxes
+- write me forced aubergine in every state
+- text left/right margin balanced
+- video thumbnails contain inside frames
+- 7 video links in slider
