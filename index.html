@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- KOTLOVSKY PORTFOLIO v41 STATIC FINAL — NEW SAILBOOK ASSETS + VIDEO LINKS -->
+<!-- KOTLOVSKY PORTFOLIO v43 VIDEO LINK REPLACE -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -1189,9 +1189,21 @@ a[href^="mailto:"]:hover {
 }
 
 
+
+/* v42 video thumbnail consistency */
+.video-strip .video-slot.video-link {
+  flex: 0 0 calc((100% - 56px) / 5);
+  height: 4.15cm;
+}
+.video-strip .video-slot.video-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 </style>
 </head>
-<body data-kotlovsky-version="v41-static-final">
+<body data-kotlovsky-version="v43-video-link-replace">
   <header class="site-header">
     <a class="brand" href="#top" aria-label="kotlovsky home">
       <img src="assets/logo/kotlovsky-cat.png" alt="kotlovsky logo">
@@ -1293,15 +1305,7 @@ a[href^="mailto:"]:hover {
 
       <div class="glass-panel video-panel">
         <div class="filmstrip video-strip" aria-label="audio and video links">
-          
-          <a class="video-card" href="https://youtu.be/FVnDAucMKyk" target="_blank" rel="noopener" aria-label="Sailbook Cup 2015">
-            <img src="https://img.youtube.com/vi/FVnDAucMKyk/hqdefault.jpg" alt="Sailbook Cup 2015">
-            <span class="play">▶</span>
-          </a>
-          <a class="video-card" href="https://youtu.be/il9GkQmBkwg" target="_blank" rel="noopener" aria-label="Sailbook Cup 2013">
-            <img src="https://img.youtube.com/vi/il9GkQmBkwg/hqdefault.jpg" alt="Sailbook Cup 2013">
-            <span class="play">▶</span>
-          </a>
+
 <a class="video-slot video-link" href="https://youtu.be/_euLAHvTbeU?si=6bK8xyiu53UCxSub" target="_blank" rel="noopener" aria-label="open video">
             <img src="https://img.youtube.com/vi/_euLAHvTbeU/mqdefault.jpg" alt="">
           </a>
@@ -1323,6 +1327,14 @@ a[href^="mailto:"]:hover {
           <a class="video-slot video-link" href="https://youtu.be/Lq7xif8Rztg?si=Lkh-HkV850WkHpKM" target="_blank" rel="noopener" aria-label="open video">
             <img src="https://img.youtube.com/vi/Lq7xif8Rztg/mqdefault.jpg" alt="">
           </a>
+
+          <a class="video-slot video-link" href="https://youtu.be/_O7cEuTJOS4" target="_blank" rel="noopener" aria-label="SailBook Cup PROMO">
+            <img src="https://img.youtube.com/vi/_O7cEuTJOS4/mqdefault.jpg" alt="">
+          </a>
+          <a class="video-slot video-link" href="https://youtu.be/il9GkQmBkwg" target="_blank" rel="noopener" aria-label="SailBook Cup 2013">
+            <img src="https://img.youtube.com/vi/il9GkQmBkwg/mqdefault.jpg" alt="">
+          </a>
+
         </div>
       </div>
     </section>
